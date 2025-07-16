@@ -5,23 +5,20 @@ import java.math.BigDecimal;
 public class Order {
     private final String UserId, orderId;
     private final BigDecimal amount;
+    private final String email;
 
-    public Order(String userId, String orderId, BigDecimal amount) {
+    public Order(String userId, String orderId, BigDecimal amount, String email) {
         this.UserId = userId;
         this.orderId = orderId;
         this.amount = amount;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    @Override
-    public String toString() {
-        return "Order: { User: " + UserId + ", OrderId: " + orderId + ", Amount: " + amount + " }";
+        this.email = email;
     }
 
     public String getUserId() {
         return UserId;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

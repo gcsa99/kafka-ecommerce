@@ -7,4 +7,8 @@ public class Email {
         this.subject = subject;
         this.body = body;
     }
+
+    public String toString() {
+        return "Email: { subject: " + subject + ", body: " + body + "}";
+    }
 }

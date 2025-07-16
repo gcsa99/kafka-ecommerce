@@ -16,8 +16,8 @@ public class LogService {
     }
 
     private void parse(ConsumerRecord<String, String> record) {
-        System.out.println("log:");
-        System.out.println("key: " + record.key() + " value: " + record.value());
+        System.out.println("log: " + record.topic());
+        System.out.println("key: " + record.key() + "\nvalue: " + record.value());
         System.out.println("partition: " + record.partition() + " offset: " + record.offset());
         System.out.println("--------------------");
     }
